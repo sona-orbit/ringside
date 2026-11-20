@@ -185,6 +185,35 @@ h3 { font-size: 1.1875rem; font-weight: 800; margin-bottom: 8px; }
 .nf h2 { font-size: 1.125rem; margin: 0 0 4px; }
 .nf p { margin: 0; }
 
+/* ---- help page: one section per screen, text beside its screenshot ---- */
+.guide { max-width: 1000px; padding: 40px 0 72px; }
+.guide-head { max-width: 46em; margin-bottom: 8px; }
+.guide-head h1 { font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem); margin-bottom: 8px; }
+.toc { margin-top: 24px; }
+.toc h2 { font-size: .875rem; color: var(--mute); margin: 0 0 10px; letter-spacing: .03em; }
+.toc ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; counter-reset: toc; }
+.toc li { counter-increment: toc; }
+.toc a { display: inline-block; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); text-decoration: none; font-size: .9375rem; }
+.toc a::before { content: counter(toc, decimal-leading-zero) " "; color: var(--mute); font-variant-numeric: tabular-nums; }
+.toc a:hover { border-color: var(--ink); }
+.step { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px 64px; padding: 44px 0; border-top: 1px solid var(--line); scroll-margin-top: 16px; }
+.step.has-shot { grid-template-columns: minmax(0, 1fr) 280px; align-items: start; }
+.step-text { max-width: 40em; }
+.step-text h2 { font-size: clamp(1.375rem, 1.2rem + .6vw, 1.625rem); margin: 0 0 12px; }
+.step-text ul { padding-left: 1.3em; }
+.step-text li { margin-bottom: 8px; }
+.step-no { margin: 0 0 6px; color: var(--coral); font-weight: 800; font-size: .875rem; letter-spacing: .06em; font-variant-numeric: tabular-nums; }
+.step-shot { width: 100%; position: sticky; top: 24px; }
+.step-shot figcaption { text-align: center; font-size: .875rem; }
+.card-shot img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.guide-end h2 + ul { margin-bottom: 32px; }
+#faq { scroll-margin-top: 16px; }
+@media (max-width: 760px) {
+  .guide { padding: 24px 0 48px; }
+  .step, .step.has-shot { grid-template-columns: minmax(0, 1fr); padding: 36px 0; }
+  .step-shot { position: static; width: min(270px, 78%); justify-self: center; }
+}
+
 /* ---- footer ---- */
 .foot { border-top: 1px solid var(--line); padding: 40px 0 48px; font-size: .9375rem; color: var(--mute); }
 .foot-brand { display: flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 800; line-height: 1.35; margin-bottom: 16px; }

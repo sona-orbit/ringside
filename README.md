@@ -8,4 +8,4 @@ Served by GitHub Pages at https://sona-orbit.github.io/ringside/
 
 - Home, help and privacy pages in English and Traditional Chinese
 - Static HTML and CSS, no build step on this repository
-- Published by Sona Orbit. To report a problem, use "Report a Problem" in the app's Settings.
+- Published by Sona Orbit. To report a problem, use "Report a data or app problem" in the app's Settings.
